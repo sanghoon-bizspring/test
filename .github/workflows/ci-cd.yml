@@ -24,3 +24,11 @@ jobs:
       - name: Run tests
         run: |
           pytest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy to cloud
+        run: |
+          echo hell-o world
